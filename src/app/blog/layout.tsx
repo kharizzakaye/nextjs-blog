@@ -9,9 +9,13 @@ export default function Layout({
     children: React.ReactNode;
   }>) {
     return (
-      <>
+      <div style={{display: 'flex'}}>
+        <div style={{width: '10%'}}>
         <SideNav/>
-        {children}
-      </>
+        </div>
+        
+        <div>{children}</div>
+
+      </div>
     );
   }
