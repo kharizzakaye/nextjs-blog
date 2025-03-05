@@ -1,4 +1,5 @@
 import styles from "@/app/ui/styles/home.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,6 +16,24 @@ export default function Home() {
                     className={`outline outline-1 outline-offset-2 border-purple-700 text-purple-700 hover:text-white py-2 px-4 rounded hover:bg-purple-800 md:w-auto ${styles.fit_content}`}>
                     Go to Blog
                   </a>
+              </div>
+
+              <div className="relative flex justify-center items-center">
+                  <Image
+                    src="/image-desktop.jpeg"
+                    alt="Desktop version of image"
+                    width={1000}
+                    height={760}
+                    className="hidden rounded-lg md:block z-10"
+                  />
+
+                  <Image
+                    src="/image-mobile.jpeg"
+                    alt="Mobile version of the image"
+                    width={560}
+                    height={620}
+                    className="block rounded-md md:hidden"
+                  />
               </div>
           </div>
 
